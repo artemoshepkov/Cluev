@@ -1,6 +1,51 @@
 .header {
-    &__container {}
-    &__logo {}
-    &__social {}
-    &__burger {}
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &__inner {
+        display: flex;
+        color: $header-color-init;
+        justify-content: space-between;
+        align-items: center;
+        min-height: $min-header-height;
+
+        transition: color $transition-speed $transition-ease;
+    }
+
+    &__link {}
+
+    &__controls {
+        display: flex;
+        justify-content: flex-start;
+        flex: 1;
+    }
+
+    &__logo {
+        svg {
+            width: 64px;
+            height: 48px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: flex-end;
+        flex: 1;
+    }
+
+    &__contact {
+        display: flex;
+    }
+
+    &--scrolled {
+        color: $header-color-scroll !important;
+    }
 }

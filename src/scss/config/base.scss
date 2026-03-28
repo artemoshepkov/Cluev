@@ -1,3 +1,11 @@
+html {
+    scroll-behavior: smooth;
+
+    @media (prefers-reduced-motion: reduce) {
+        scroll-behavior: auto;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -6,7 +14,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .main {
@@ -14,9 +23,20 @@ body {
 }
 
 .container {
-    max-width: #{$laptop + px};
+    max-width: $container-max;
     width: 100%;
-    padding: 0 15px;
+    padding: 0 clamp(1rem, 4vw, 2.5rem);
     margin: 0 auto;
-    height: 100%;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }

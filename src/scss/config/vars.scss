@@ -1,3 +1,33 @@
 $laptop: 1440;
 $tablet: 1100;
 $mobile: 768;
+$mobile-sm: 480;
+
+// Sizes
+$min-header-height: 88px;
+
+// Animations
+$transition-speed: 0.4s;
+$transition-ease: ease-in-out;
+
+// Colors
+$color-cream: #f5f3f0;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-navy: #1a2744;
+$color-muted: #a8a8a8;
+$color-muted-dark: #6b6b6b;
+
+$header-color-init: $color-white;
+$header-color-scroll: $color-black;
+
+// Локальные семейства (см. config/fonts.scss)
+$font-noto-sans-condensed: 'Noto Sans Condensed', system-ui, sans-serif;
+$font-roboto-condensed: 'Roboto Condensed', system-ui, sans-serif;
+
+$font-serif: 'Cormorant Garamond', 'Times New Roman', serif;
+$font-sans: 'Montserrat', 'Inter', system-ui, sans-serif;
+
+$container-max: 1600px;
+$section-space: clamp(3rem, 8vw, 7.5rem);
+$ease-out: cubic-bezier(0.22, 1, 0.36, 1);

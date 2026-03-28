@@ -1,32 +1,47 @@
-<div class="hero">
-    <div class="hero__container container">
-        <div class="hero__left">
-            <div class="hero__name-wrapper">
-                <h1 class="hero__name">Гончаров<br>Александр</h1>
-                <span class="hero__nick">@YaSanyaBeats</span>
+<section class="hero">
+    <div class="hero__inner container">
+
+        <div uk-slideshow="animation: fade; height: viewport; index: 2;">
+            <div class="uk-position-relative uk-visible-toggle uk-light">
+                <ul class="uk-slideshow-items">
+                    <li>
+                        <video class="hero__video" src="../static/videos/svetlana_flexing.mp4" autoplay muted loop playsinline uk-cover></video>
+                    </li>
+                    <li>
+                        <img src="../images/random_back.png" uk-cover>
+                    </li>
+                    <li>
+                        <video class="hero__video" src="../static/videos/svetlana_flexing.mp4" autoplay muted loop playsinline uk-cover></video>
+                    </li>
+                    <li>
+                        <img src="../images/random_back.png" uk-cover>
+                    </li>
+                    <li>
+                        <img src="../images/random_back.png" uk-cover>
+                    </li>
+                </ul>
+
+                <!-- <div class="uk-overlay uk-overlay-primary uk-position-cover"></div> -->
+
+                <div class="hero__content">
+                    <div class=" container uk-text-center">
+                        <div>ЮВЕЛИРНЫЙ ДОМ CLUEV</div>
+                        <div>Основан в 1998 году</div>
+                        <a class="hero__link" href="#">СМОТРЕТЬ КАТАЛОГ</a>
+                    </div>
+                </div>
+                
+                <div class="uk-position-bottom-center uk-position-small">
+                    <ul class="uk-dotnav">
+                        <li uk-slideshow-item="0"><a href="#">Item 1</a></li>
+                        <li uk-slideshow-item="1"><a href="#">Item 2</a></li>
+                        <li uk-slideshow-item="2"><a href="#">Item 3</a></li>
+                        <li uk-slideshow-item="3"><a href="#">Item 4</a></li>
+                        <li uk-slideshow-item="4"><a href="#">Item 5</a></li>
+                    </ul>
+                </div>
             </div>
-            <img class="hero__img" src="@img/avatar.png">
         </div>
-        <div class="hero__right">
-            <h2 class="hero__title">Init Gulp</h2>
-            <div class="hero__code code">
-                <div class="code__header">
-                    <span class="code__title">DEV</span>
-                </div>
-                <div class="code__body">
-                    <p class="code__text">npm run dev</p>
-                    <img class="code__copy" src="@img/icons/copy.svg">
-                </div>
-            </div>
-            <div class="hero__code code">
-                <div class="code__header">
-                    <span class="code__title">PROD</span>
-                </div>
-                <div class="code__body">
-                    <p class="code__text">npm run build</p>
-                    <img class="code__copy" src="@img/icons/copy.svg">
-                </div>
-            </div>
-        </div>
+
     </div>
-</div>
+</section>

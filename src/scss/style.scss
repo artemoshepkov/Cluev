@@ -5,6 +5,7 @@
 
 /** Подключение переменных */
 @import 'config/vars';
+@import '../static/uikit.min.css';
 
 /** Подключение sass function и mixins и extends стилей */
 @import 'config/functions';
@@ -17,7 +18,9 @@
 /** БЕМ блоки используемые во всё проекте */
 @import 'config/common';
 
+
 /** Подключение стилей отдельных блоков и секций */
+@import 'components/burger';
 @import 'components/header';
 @import 'components/footer';
 
