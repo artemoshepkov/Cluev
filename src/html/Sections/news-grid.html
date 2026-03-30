@@ -1,0 +1,27 @@
+<section class="news-grid">
+    <div class="news-grid__inner container">
+
+        <div>
+            <h2>Новости и события дома Cluev</h2>
+            <button>Читать все статьи</button>
+        </div>
+
+        <div>
+            @@include('../blocks/news-card.html', {
+                'image': '@img/news-grid/3.png',
+                'date': 'Фев. 12, 2026',
+                'title': 'Lorem ipsum dolor sit amet consectetur. Quisque massa nunc tempus fusce diam pellentesque.'
+            })
+            @@include('../blocks/news-card.html', {
+                'image': '@img/news-grid/1.png',
+                'date': 'Фев. 12, 2026',
+                'title': 'Lorem ipsum dolor sit amet consectetur. Quisque massa nunc tempus fusce diam pellentesque.'
+            })
+            @@include('../blocks/news-card.html', {
+                'image': '@img/news-grid/2.png',
+                'date': 'Фев. 12, 2026',
+                'title': 'Lorem ipsum dolor sit amet consectetur. Quisque massa nunc tempus fusce diam pellentesque.'
+            })
+        </div>
+    </div>
+</section>

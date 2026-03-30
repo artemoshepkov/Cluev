@@ -7,3 +7,7 @@ node_modules
 package-lock.json
 gulp/version.json
 src/static/videos
+nul
+nul.map
+src/fonts
+src/images

@@ -1,0 +1,45 @@
+.ambassadors {
+		&__inner {}
+		&__sections {
+            display: flex;
+            flex-direction: row;
+            gap: 60px;
+
+        }
+		&__col {
+            display: flex;
+            flex-direction: column;
+            padding: 80px 0;
+
+            justify-content: center;
+        }
+
+		&__col--text {
+            width: 405px;
+
+        }
+
+        &__col--photo {
+            width: 540px;
+            height: 665px;
+        }
+
+		&__label {}
+		&__title {}
+		&__quote {}
+		&__cite {}
+		&__role {}
+		&__name {}
+		&__signature {}
+		&__figure {}
+		&__portrait {}
+		&__col--products {}
+		&__product {}
+		&__product-visual {}
+		&__product-img {}
+		&__product-body {}
+		&__product-series {}
+		&__product-row {}
+		&__product-name {}
+		&__product-spec {}
+}
