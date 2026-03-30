@@ -22,6 +22,8 @@
 /** Подключение стилей отдельных блоков и секций */
 @import 'components/burger';
 @import 'components/header';
-@import 'components/footer';
+// @import 'components/footer';
 
 @import 'components/hero';
+@import 'components/product-card.scss';
+@import 'components/ambassadors';
