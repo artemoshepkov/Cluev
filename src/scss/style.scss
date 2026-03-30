@@ -18,12 +18,16 @@
 /** БЕМ блоки используемые во всё проекте */
 @import 'config/common';
 
-
 /** Подключение стилей отдельных блоков и секций */
-@import 'components/burger';
+@import 'components/blocks/container';
+@import 'components/blocks/burger';
+@import 'components/blocks/product-card';
+@import 'components/blocks/primary-button';
+@import 'components/blocks/primary-link';
+
 @import 'components/header';
-// @import 'components/footer';
 
 @import 'components/hero';
-@import 'components/product-card.scss';
 @import 'components/ambassadors';
+@import 'components/decor-section';
+

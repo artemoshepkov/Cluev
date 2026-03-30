@@ -1,16 +1,34 @@
 .hero {
-		&__inner {}
-		&__video {}
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
 
-		&__content {
-            position: absolute;
-            z-index: 10;
+    &__media {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    &__inner {}
 
-            top: 90%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding-bottom: 100px;
-        }
+    &__video {
+        position: absolute;
+        object-fit: cover;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
 
-		&__link {}
+    &__content {
+        position: absolute;
+        z-index: 10;
+
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-bottom: 100px;
+    }
+
+    &__link {}
 }

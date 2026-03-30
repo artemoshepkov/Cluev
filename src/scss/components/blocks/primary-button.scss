@@ -1,0 +1,32 @@
+.primary-button {
+    appearance: none;
+    -webkit-appearance: none;
+
+    font-family: $font-noto-sans-condensed;
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 14px;
+    padding: 10px 0;
+    background: none;
+    border-radius: 0;
+    border-width: 1px;
+    gap: 8px;
+
+    transition: border-color $transition-speed $transition-ease;
+
+    &--white-border {
+        border-color: rgba($color: $color-white, $alpha: 0.1);
+
+        &:hover {
+            border-color: rgba($color: $color-white, $alpha: 1.0);
+        }
+    }
+
+    &--black-border {
+        border-color: rgba($color: $color-black, $alpha: 0.1);
+
+        &:hover {
+            border-color: rgba($color: $color-black, $alpha: 1.0);
+        }
+    }
+}

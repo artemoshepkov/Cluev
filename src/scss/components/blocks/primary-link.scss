@@ -1,0 +1,30 @@
+.primary-link {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity $transition-speed $transition-ease;
+
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
+
+    &--underlined {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &--hover-dim {
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    &--hover-solid {
+        &:hover {
+            opacity: 1.0;
+        }
+    }
+}
