@@ -21,12 +21,36 @@ $color-muted-dark: #6b6b6b;
 $header-color-init: $color-white;
 $header-color-scroll: $color-black;
 
-// Локальные семейства (см. config/fonts.scss)
+// ---------------------------------------------------------------------------
+// Локальные файлы — @font-face в config/fonts.scss (woff/woff2 через gulp)
+// ---------------------------------------------------------------------------
+$font-noto-sans-display-condensed: 'Noto Sans Display Condensed', system-ui, sans-serif;
+$font-tt-firs-text: 'TT Firs Text', system-ui, sans-serif;
+$font-tt-ricordi-marmo: 'TT Ricordi Marmo', 'Times New Roman', serif;
+
+// ---------------------------------------------------------------------------
+// Google Fonts — подключение в html/head.html
+// ---------------------------------------------------------------------------
+$font-cormorant-garamond: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+$font-montserrat: 'Montserrat', system-ui, sans-serif;
+$font-inter: 'Inter', system-ui, sans-serif;
+
+// Без локальных файлов (при необходимости — отдельное подключение)
 $font-noto-sans-condensed: 'Noto Sans Condensed', system-ui, sans-serif;
 $font-roboto-condensed: 'Roboto Condensed', system-ui, sans-serif;
 
-$font-serif: 'Cormorant Garamond', 'Times New Roman', serif;
+// ---------------------------------------------------------------------------
+// Роли по умолчанию (common.scss и блоки)
+// ---------------------------------------------------------------------------
+$font-serif: $font-cormorant-garamond;
 $font-sans: 'Montserrat', 'Inter', system-ui, sans-serif;
+
+// Локальные первыми в стеке (раскомментируйте при необходимости):
+// $font-serif: 'TT Ricordi Marmo', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+// $font-sans: 'TT Firs Text', 'Montserrat', 'Inter', system-ui, sans-serif;
+
+// Узкий sans для капс-лейблов / навигации
+$font-display: $font-noto-sans-display-condensed;
 
 $container-max: 1600px;
 $section-space: clamp(3rem, 8vw, 7.5rem);
