@@ -1,0 +1,16 @@
+.news-featured {
+    &__inner {
+        display: flex;
+
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__text {
+        
+    }
+}

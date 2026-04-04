@@ -1,0 +1,47 @@
+.club {
+    background: $color-black;
+    min-height: 900px;
+    
+    &__inner {
+        min-height: 900px;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        color: $color-white
+    }
+
+    &__info {
+        padding: 256px 0;
+        flex: 1 1 0;
+    }
+
+    &__product {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex: 1 1 0;
+    }
+
+    &__product-media {
+        position: absolute;
+        z-index: 0;
+
+        img {
+            overflow: hidden;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.product-info {
+    position: relative;
+    z-index: 1;
+    bottom: 0;
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+    }
+}

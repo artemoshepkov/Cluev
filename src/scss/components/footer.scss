@@ -1,0 +1,27 @@
+.footer {
+    &__inner {
+        position: relative;
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__down-controls {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__nav1 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo { 
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

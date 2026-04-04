@@ -1,0 +1,57 @@
+.addresses {
+    min-height: 720px;
+
+    &__inner.container {
+        display: flex;
+        justify-content: space-between;
+        min-height: inherit;
+        padding: 0 0;
+    }
+
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        min-height: inherit;
+    }
+
+    &__section-back {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__section-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1 1 0;
+        align-items: center;
+
+        position: relative;
+        z-index: 1;
+    }
+
+    &__left-section {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex: 1 1 0;
+
+
+    }
+
+    &__right-section {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex: 1 1 0;
+    }
+}

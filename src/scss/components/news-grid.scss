@@ -1,0 +1,12 @@
+.news-grid {
+    &__inner {}
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__news-cards {
+        display: flex;
+        justify-content: center;
+    }
+}

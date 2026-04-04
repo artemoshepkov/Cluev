@@ -1,0 +1,17 @@
+.service-controls {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__controls {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__content {
+    }
+
+    &__content-switcher {}
+}
