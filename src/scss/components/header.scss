@@ -10,6 +10,16 @@
         text-decoration: none;
     }
 
+    &__text {
+        font-family: $font-noto-sans-display-condensed;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 1%;
+        text-align: center;
+    }
+
     &__inner {
         display: flex;
         padding: 0px 42px;
@@ -20,8 +30,6 @@
 
         transition: color $transition-speed $transition-ease;
     }
-
-    &__link {}
 
     &__controls {
         display: flex;

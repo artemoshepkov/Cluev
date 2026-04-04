@@ -1,0 +1,26 @@
+.news-card {
+    &__date {
+        font-family: $font-tt-firs-text;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0%;
+
+        text-align: left;
+
+        color: #00000080;
+    }
+    &__title {
+        font-family: $font-tt-firs-text;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0%;
+
+        text-align: left;
+
+        color: $color-black;
+    }
+}

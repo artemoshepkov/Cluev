@@ -12,6 +12,7 @@ $transition-ease: ease-in-out;
 
 // Colors
 $color-cream: #f1ede9;
+$color-light-green: #FAF8F6;
 $color-black: #000000;
 $color-white: #ffffff;
 $color-shadow-whisper: #010101;
@@ -25,7 +26,7 @@ $header-color-scroll: $color-black;
 // ---------------------------------------------------------------------------
 $font-noto-sans-display-condensed: 'Noto Sans Display Condensed', system-ui, sans-serif;
 $font-tt-firs-text: 'TT Firs Text', system-ui, sans-serif;
-$font-tt-ricordi-marmo: 'TT Ricordi Marmo', 'Times New Roman', serif;
+$font-tt-ricordi-marmo: 'TT Ricordi Marmo';
 
 // ---------------------------------------------------------------------------
 // Google Fonts — подключение в html/head.html

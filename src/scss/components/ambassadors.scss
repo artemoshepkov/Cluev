@@ -1,4 +1,5 @@
 .ambassadors {
+	background: white;
 		&__inner {
             display: flex;
             flex-direction: row;
@@ -9,29 +10,131 @@
 		&__col {
             display: flex;
             flex-direction: column;
-			align-items: center;
+			// align-items: center;
 
 			&--text { flex: 0 1 30%; }
 			&--photo { flex: 0 1 45%; }
-			&--products { flex: 0 1 25%; }
+			&--products {
+				flex: 0 1 25%;
+				align-items: stretch;
+				align-self: stretch;
+				gap: clamp(1rem, 2.5vw, 1.75rem);
+
+				.card {
+					width: 100%;
+
+					&__holder {
+						aspect-ratio: 1 / 1;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						background: $color-light-green;
+						overflow: hidden;
+					}
+
+					&__img {
+						max-width: 88%;
+						max-height: 88%;
+						width: auto;
+						height: auto;
+						object-fit: contain;
+					}
+
+					&__body {
+						width: 100%;
+						margin-top: clamp(0.5rem, 1.5vw, 0.75rem);
+					}
+
+					&__series {
+						font-family: $font-tt-ricordi-marmo;
+						font-weight: 400;
+						font-style: normal;
+						font-size: 14px;
+						line-height: 24px;
+						letter-spacing: 2%;
+						color: #00000080;
+	
+						text-align: left;
+					}
+
+					&__name {
+						font-family: $font-tt-firs-text;
+						font-weight: 400;
+						font-style: normal;
+						font-size: 14px;
+						line-height: 20px;
+						letter-spacing: 0%;
+						color: $color-black;
+	
+						text-align: left;
+					}
+
+					&__spec {
+						font-family: $font-tt-firs-text;
+						font-weight: 400;
+						font-style: normal;
+						font-size: 14px;
+						line-height: 20px;
+						letter-spacing: 0%;
+						color: #00000080;
+	
+						text-align: left;
+					}
+				}
+			}
         }
 
-		&__label {}
-		&__title {}
+		&__label {
+			font-family: $font-tt-ricordi-marmo;
+			font-weight: 400;
+			font-style: normal;
+			font-size: 16px;
+			line-height: 24px;
+			letter-spacing: 0;
+			color: $color-black;
+		}
+		&__title {
+			font-family: $font-tt-ricordi-marmo;
+			font-weight: 400;
+			font-style: normal;
+			font-size: 48px;
+			line-height: 60px;
+			letter-spacing: 0;
+			color: $color-black;
+		}
+
+		&__text {
+			font-family: $font-tt-firs-text;
+			font-weight: 400;
+			font-style: normal;
+			font-size: 18px;
+			line-height: 24px;
+			letter-spacing: 0;
+			color: $color-black;
+		}
 		&__quote {}
 		&__cite {}
-		&__role {}
-		&__name {}
+
+		&__role {
+			font-family: $font-tt-firs-text;
+			font-weight: 400;
+			font-style: normal;
+			font-size: 14px;
+			line-height: 20px;
+			letter-spacing: 0;
+			color: #00000080;
+		}
+
+		&__name {
+			font-family: $font-tt-ricordi-marmo;
+			font-weight: 400;
+			font-style: normal;
+			font-size: 18px;
+			line-height: 24px;
+			letter-spacing: 2%;
+			color: $color-black;
+		}
 		&__signature {}
 		&__figure {}
 		&__portrait {}
-		&__col--products {}
-		&__product {}
-		&__product-visual {}
-		&__product-img {}
-		&__product-body {}
-		&__product-series {}
-		&__product-row {}
-		&__product-name {}
-		&__product-spec {}
 }

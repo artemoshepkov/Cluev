@@ -9,8 +9,6 @@
         width: 100%;
         height: 100%;
     }
-    
-    &__inner {}
 
     &__video {
         position: absolute;
@@ -30,5 +28,23 @@
         padding-bottom: 100px;
     }
 
-    &__link {}
+    &__header {
+        font-family: $font-tt-ricordi-marmo;
+        font-weight: 400;
+        font-size: 52px;
+        font-style: noraml;
+        line-height: 60px;
+        letter-spacing: 0;
+        text-align: center;
+    }
+
+    &__info {
+        font-family: $font-tt-firs-text;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0;
+        text-align: center;
+    }
 }

@@ -33,6 +33,42 @@
             height: 100%;
         }
     }
+
+    &__header {
+        font-family: $font-tt-ricordi-marmo;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        color: $color-white;
+
+        text-align: left;
+    }
+
+    &__first-paragraph {
+        font-family: $font-tt-ricordi-marmo;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 40px;
+        letter-spacing: 0%;
+        color: $color-white;
+
+        text-align: left;
+    }
+
+    &__second-paragraph {
+        font-family: $font-tt-firs-text;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        color: #FFFFFF99;
+
+        text-align: left;
+    }
 }
 
 .product-info {
@@ -43,5 +79,57 @@
     &__flex {
         display: flex;
         justify-content: space-between;
+    }
+    &__collection {
+        font-family: $font-tt-ricordi-marmo;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0%;
+        color: #FFFFFF99;
+
+        text-align: left;
+    }
+
+    &__name {
+        font-family: $font-tt-ricordi-marmo;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0%;
+        color: #FFFFFF99;
+
+        text-align: right;
+    }
+
+    &__collection-title {
+        font-family: $font-tt-firs-text;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0%;
+        color: $color-white;
+
+        text-align: left;
+    }
+
+    &__details {
+        font-family: $font-tt-firs-text;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.13px;
+        color: $color-white;
+
+        text-align: right;
+
+        &--less-size {
+            font-size: 14px;
+            letter-spacing: 0;
+        }
     }
 }
