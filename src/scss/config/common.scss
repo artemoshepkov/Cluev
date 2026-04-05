@@ -1,5 +1,5 @@
 body {
-    background-color: $color-cream;
+    background-color: $color-white;
     font-family: $font-sans;
     font-weight: 400;
     font-size: 1rem;
@@ -32,4 +32,40 @@ img {
 
 main {
     display: block;
+}
+
+.text {
+    @each $size in $text-sizes {
+        &_#{$size} {
+            font-size: #{$size}px;
+        }
+    }
+
+    @media (max-width: #{$laptop}px) {
+        @each $size in $text-sizes {
+            &_laptop-#{$size} {
+                font-size: #{$size}px;
+            }
+        }
+    }
+
+    @media (max-width: #{$tablet}px) {
+        @each $size in $text-sizes {
+            &_tablet-#{$size} {
+                font-size: #{$size}px;
+            }
+        }
+    }
+
+    @media (max-width: #{$mobile}px) {
+        @each $size in $text-sizes {
+            &_mobile-#{$size} {
+                font-size: #{$size}px;
+            }
+        }
+    }
+
+    &_alt {
+        font-family: 'PragmaticaExtended', sans-serif;
+    }
 }

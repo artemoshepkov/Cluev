@@ -1,7 +1,7 @@
-$laptop: 1440;
-$tablet: 1100;
-$mobile: 768;
-$mobile-sm: 480;
+$laptop: 1440px;
+$tablet: 1100px;
+$mobile: 768px;
+$mobile-sm: 480px;
 
 // Sizes
 $min-header-height: 88px;
@@ -21,37 +21,24 @@ $color-light-black: #0f0f0f;
 $header-color-init: $color-white;
 $header-color-scroll: $color-black;
 
-// ---------------------------------------------------------------------------
-// Локальные файлы — @font-face в config/fonts.scss (woff/woff2 через gulp)
-// ---------------------------------------------------------------------------
 $font-noto-sans-display-condensed: 'Noto Sans Display Condensed', system-ui, sans-serif;
 $font-tt-firs-text: 'TT Firs Text', system-ui, sans-serif;
 $font-tt-ricordi-marmo: 'TT Ricordi Marmo';
 
-// ---------------------------------------------------------------------------
-// Google Fonts — подключение в html/head.html
-// ---------------------------------------------------------------------------
 $font-cormorant-garamond: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
 $font-montserrat: 'Montserrat', system-ui, sans-serif;
 $font-inter: 'Inter', system-ui, sans-serif;
 
-// Без локальных файлов (при необходимости — отдельное подключение)
 $font-noto-sans-condensed: 'Noto Sans Condensed', system-ui, sans-serif;
 $font-roboto-condensed: 'Roboto Condensed', system-ui, sans-serif;
 
-// ---------------------------------------------------------------------------
-// Роли по умолчанию (common.scss и блоки)
-// ---------------------------------------------------------------------------
 $font-serif: $font-cormorant-garamond;
 $font-sans: 'Montserrat', 'Inter', system-ui, sans-serif;
 
-// Локальные первыми в стеке (раскомментируйте при необходимости):
-// $font-serif: 'TT Ricordi Marmo', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-// $font-sans: 'TT Firs Text', 'Montserrat', 'Inter', system-ui, sans-serif;
-
-// Узкий sans для капс-лейблов / навигации
 $font-display: $font-noto-sans-display-condensed;
 
 $container-max: 1600px;
 $section-space: clamp(3rem, 8vw, 7.5rem);
 $ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+$text-sizes: 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 36, 40, 48, 56, 60, 64, 66, 72, 80, 96, 100, 120, 128;

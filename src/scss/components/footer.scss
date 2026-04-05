@@ -1,6 +1,10 @@
 .footer {
     background: $color-light-black;
 
+    @media (min-width: $laptop) {
+        min-height: 440px;
+    }
+
     &__inner {
         position: relative;
     }

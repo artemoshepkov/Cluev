@@ -1,4 +1,8 @@
 .news-featured {
+    @media (min-width: $laptop) {
+        min-height: 1000px;
+    }
+    
     &__inner {
         display: flex;
 

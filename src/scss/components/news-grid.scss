@@ -1,4 +1,8 @@
 .news-grid {
+    @media (min-width: $laptop) {
+        min-height: 1020px;
+    }
+
     &__inner {}
     &__header {
         display: flex;

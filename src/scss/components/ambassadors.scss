@@ -1,4 +1,8 @@
 .ambassadors {
+    @media (min-width: $laptop) {
+        min-height: 800px;
+    }
+
 	background: white;
 		&__inner {
             display: flex;

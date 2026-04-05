@@ -1,6 +1,10 @@
 .service-info {
     background: $color-shadow-whisper;
 
+    @media (min-width: $laptop) {
+        min-height: 720px;
+    }
+
     &__inner {
         position: relative;
         min-height: 720px;

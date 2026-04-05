@@ -1,5 +1,7 @@
 .addresses {
-    min-height: 720px;
+    @media (min-width: $laptop) {
+        min-height: 720px;
+    }
 
     &__inner.container {
         display: flex;

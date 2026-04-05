@@ -1,6 +1,9 @@
 .club {
     background: $color-black;
-    min-height: 900px;
+    
+    @media (min-width: $laptop) {
+        min-height: 900px;
+    }
     
     &__inner {
         min-height: 900px;

@@ -1,4 +1,8 @@
 .service-controls {
+    @media (min-width: $laptop) {
+        min-height: 800px;
+    }
+
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -56,5 +60,11 @@
 
     &__switch-button-text {
         font-weight: 600;
+    }
+
+    &__img {
+        width: 100%;
+        max-height: 720px; // Картинка никогда не станет выше этого значения
+        object-fit: cover; // Лишнее аккуратно обрежется, не ломая пропорций
     }
 }

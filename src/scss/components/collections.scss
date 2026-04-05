@@ -1,4 +1,10 @@
 .collections {
+    background: $color-cream;
+
+    @media (min-width: $laptop) {
+        min-height: 1050px;
+    }
+
     &__inner {
         position: relative;
     }
@@ -15,7 +21,6 @@
 
     &__grid {
         display: grid;
-        // position: 
         grid-template-columns: 330px 217px 217px 330px 275px;
         grid-template-rows: auto auto;
     }
@@ -99,5 +104,5 @@
         color: $color-black;
 
         width: 100%;
-    };
+    }
 }
