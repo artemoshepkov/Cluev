@@ -14,11 +14,12 @@
     }
 
     &__info {
-        padding: 256px 0;
+        margin: 256px 64px;
         flex: 1 1 0;
     }
 
     &__product {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -28,9 +29,10 @@
     &__product-media {
         position: absolute;
         z-index: 0;
+        overflow: hidden;
+        inset: 0;
 
         img {
-            overflow: hidden;
             object-fit: cover;
             width: 100%;
             height: 100%;
@@ -59,6 +61,8 @@
         color: $color-white;
 
         text-align: left;
+
+        margin-top: 12px;
     }
 
     &__second-paragraph {
@@ -71,11 +75,19 @@
         color: #FFFFFF99;
 
         text-align: left;
+    
+        margin-top: 24px;
+    }
+
+    &__button {
+        margin-top: 32px;
+        padding: 10px 45px;
     }
 }
 
 .product-info {
     position: relative;
+    margin: 0 40px;
     z-index: 1;
     bottom: 0;
 
@@ -83,6 +95,7 @@
         display: flex;
         justify-content: space-between;
     }
+
     &__collection {
         font-family: $font-tt-ricordi-marmo;
         font-weight: 400;
@@ -105,6 +118,7 @@
         color: #FFFFFF99;
 
         text-align: right;
+        margin-bottom: 8px;
     }
 
     &__collection-title {
@@ -117,6 +131,8 @@
         color: $color-white;
 
         text-align: left;
+
+        margin-top: 4px;
     }
 
     &__details {
@@ -130,9 +146,16 @@
 
         text-align: right;
 
+        margin-bottom: 4px;
+
         &--less-size {
             font-size: 14px;
             letter-spacing: 0;
         }
+    }
+
+    &__button {
+        width: 100%;
+        margin: 20px 0 40px 0;
     }
 }

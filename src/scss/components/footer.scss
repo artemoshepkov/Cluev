@@ -5,8 +5,28 @@
         min-height: 440px;
     }
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     &__inner {
         position: relative;
+
+        margin: 40px;
+
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            list-style-type: none; 
+            padding: 0;          
+            margin: 0;            
+        }
     }
 
     &__controls {
@@ -16,19 +36,40 @@
 
     &__down-controls {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
     &__nav {
         display: flex;
         justify-content: space-between;
+
+        gap: 20px;
+    }
+
+    &__addresses {
+
+    }
+
+    ul#{&}__addresses-group1 {
+        margin-bottom: 20px;
+    }
+
+    ul#{&}__addresses-group2 {
+        margin-bottom: 40px;
     }
 
     &__logo { 
-        position: absolute;
-        bottom: 0%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        width: 80px;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 40px;
+
+        color: $color-white;
+
+        &:hover {
+            color: $color-white;
+        }
     }
 
     &__nav-list-title {
@@ -42,6 +83,8 @@
         text-align: left;
 
         color: #FFFFFF99;
+
+        margin-bottom: 12px;
     }
 
     &__nav-link {
@@ -71,6 +114,10 @@
     }
 
     &__side-info {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
         font-family: $font-tt-firs-text;
         font-weight: 400;
         font-style: normal;

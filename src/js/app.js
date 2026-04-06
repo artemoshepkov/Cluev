@@ -52,16 +52,20 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothAnchors();
 });
 
-const header = document.querySelector('.header__inner'); // Убедись, что у шапки класс .header
+const header = document.querySelector('.header');
+const header__inner = document.querySelector('.header__inner');
 const heroSection = document.querySelector('section:first-of-type');
 
+const headerHeight = header.offsetHeight;
 const sectionHeight = heroSection.offsetHeight;
 
 window.addEventListener('scroll', () => {    
     // Если прокрутка больше 50 пикселей (или высоты первого экрана)
-    if (window.scrollY > sectionHeight) {
+    if (window.scrollY > sectionHeight - headerHeight) {
         header.classList.add('header--scrolled');
+        header__inner.classList.add('header--scrolled-inner')
     } else {
         header.classList.remove('header--scrolled');
+        header__inner.classList.remove('header--scrolled-inner')
     }
 });

@@ -3,142 +3,180 @@
         min-height: 800px;
     }
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-items: center;
+
 	background: white;
-		&__inner {
-            display: flex;
-            flex-direction: row;
-			justify-content: space-between;
-            // gap: 60px;
-		}
+	&__inner {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 80px 0;
+		gap: 60px;
+	}
 
-		&__col {
-            display: flex;
-            flex-direction: column;
-			// align-items: center;
+	&__col {
+		display: flex;
+		flex-direction: column;
+		// align-items: center;
 
-			&--text { flex: 0 1 30%; }
-			&--photo { flex: 0 1 45%; }
-			&--products {
-				flex: 0 1 25%;
-				align-items: stretch;
-				align-self: stretch;
-				gap: clamp(1rem, 2.5vw, 1.75rem);
+		&--text { 
+			flex: 0 1 30%;
 
-				.card {
+		 }
+		&--photo { flex: 0 1 45%; }
+		&--products {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+
+			flex: 0 1 25%;
+			align-items: stretch;
+			align-self: stretch;
+			gap: clamp(1rem, 2.5vw, 1.75rem);
+
+			.card {
+				width: 100%;
+
+				&__holder {
+					aspect-ratio: 1 / 1;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: $color-light-green;
+					overflow: hidden;
+				}
+
+				&__img {
+					max-width: 88%;
+					max-height: 88%;
+					width: auto;
+					height: auto;
+					object-fit: contain;
+				}
+
+				&__body {
 					width: 100%;
+					margin-top: clamp(0.5rem, 1.5vw, 0.75rem);
+					margin: 8px 0 0 12px;
+				}
 
-					&__holder {
-						aspect-ratio: 1 / 1;
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						background: $color-light-green;
-						overflow: hidden;
-					}
+				&__series {
+					font-family: $font-tt-ricordi-marmo;
+					font-weight: 400;
+					font-style: normal;
+					font-size: 14px;
+					line-height: 24px;
+					letter-spacing: 2%;
+					color: #00000080;
 
-					&__img {
-						max-width: 88%;
-						max-height: 88%;
-						width: auto;
-						height: auto;
-						object-fit: contain;
-					}
+					text-align: left;
+				}
 
-					&__body {
-						width: 100%;
-						margin-top: clamp(0.5rem, 1.5vw, 0.75rem);
-					}
+				&__name {
+					font-family: $font-tt-firs-text;
+					font-weight: 400;
+					font-style: normal;
+					font-size: 14px;
+					line-height: 20px;
+					letter-spacing: 0%;
+					color: $color-black;
 
-					&__series {
-						font-family: $font-tt-ricordi-marmo;
-						font-weight: 400;
-						font-style: normal;
-						font-size: 14px;
-						line-height: 24px;
-						letter-spacing: 2%;
-						color: #00000080;
-	
-						text-align: left;
-					}
+					text-align: left;
+					min-width: 0;
+				}
 
-					&__name {
-						font-family: $font-tt-firs-text;
-						font-weight: 400;
-						font-style: normal;
-						font-size: 14px;
-						line-height: 20px;
-						letter-spacing: 0%;
-						color: $color-black;
-	
-						text-align: left;
-					}
+				&__spec {
+					font-family: $font-tt-firs-text;
+					font-weight: 400;
+					font-style: normal;
+					font-size: 14px;
+					line-height: 20px;
+					letter-spacing: 0%;
+					color: #00000080;
 
-					&__spec {
-						font-family: $font-tt-firs-text;
-						font-weight: 400;
-						font-style: normal;
-						font-size: 14px;
-						line-height: 20px;
-						letter-spacing: 0%;
-						color: #00000080;
-	
-						text-align: left;
-					}
+					text-align: left;
+					flex-shrink: 1;
+					min-width: 0;
+				}
+
+				&__row {
+					display: flex;
+					justify-content: space-between;
 				}
 			}
-        }
+		}
+}
 
-		&__label {
-			font-family: $font-tt-ricordi-marmo;
-			font-weight: 400;
-			font-style: normal;
-			font-size: 16px;
-			line-height: 24px;
-			letter-spacing: 0;
-			color: $color-black;
-		}
-		&__title {
-			font-family: $font-tt-ricordi-marmo;
-			font-weight: 400;
-			font-style: normal;
-			font-size: 48px;
-			line-height: 60px;
-			letter-spacing: 0;
-			color: $color-black;
-		}
+	&__label {
+		font-family: $font-tt-ricordi-marmo;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0;
+		color: $color-black;
+	}
+	&__title {
+		font-family: $font-tt-ricordi-marmo;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 48px;
+		line-height: 60px;
+		letter-spacing: 0;
+		color: $color-black;
 
-		&__text {
-			font-family: $font-tt-firs-text;
-			font-weight: 400;
-			font-style: normal;
-			font-size: 18px;
-			line-height: 24px;
-			letter-spacing: 0;
-			color: $color-black;
-		}
-		&__quote {}
-		&__cite {}
+		margin-top: 10px;
+	}
 
-		&__role {
-			font-family: $font-tt-firs-text;
-			font-weight: 400;
-			font-style: normal;
-			font-size: 14px;
-			line-height: 20px;
-			letter-spacing: 0;
-			color: #00000080;
-		}
+	&__text {
+		font-family: $font-tt-firs-text;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: 0;
+		color: $color-black;
+	}
+	&__quote {
+		display: flex;
+		flex-direction: column;
+		margin-top: 32px;
+		gap: 12px;
+	}
+	&__cite {
+		display: flex;
+		flex-direction: column;
+		align-items:flex-end;
+		margin-top: 51px;
+	}
 
-		&__name {
-			font-family: $font-tt-ricordi-marmo;
-			font-weight: 400;
-			font-style: normal;
-			font-size: 18px;
-			line-height: 24px;
-			letter-spacing: 2%;
-			color: $color-black;
-		}
-		&__signature {}
-		&__figure {}
-		&__portrait {}
+	&__role {
+		font-family: $font-tt-firs-text;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0;
+		color: #00000080;
+	}
+
+	&__name {
+		font-family: $font-tt-ricordi-marmo;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: 2%;
+		color: $color-black;
+
+		margin-top: 4px;
+	}
+	&__signature {
+		margin-top: 24px;
+	}
+	&__figure {}
+	&__portrait {}
 }

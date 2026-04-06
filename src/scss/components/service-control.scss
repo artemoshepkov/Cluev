@@ -3,18 +3,27 @@
         min-height: 800px;
     }
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     &__inner {
         display: flex;
         justify-content: space-between;
+        margin: 40px 0;
     }
 
     &__controls {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        margin-left: 24px;
     }
 
     &__content {
+        margin: 40px 0;
     }
 
     &__heading-text {
@@ -41,6 +50,8 @@
         text-align: left;
 
         color: $color-black;
+
+        margin-top: 8px;
     }
 
     &__description {
@@ -54,17 +65,40 @@
         text-align: left;
 
         color: #000000CC;
+        margin-top: 32px;
     }
 
-    &__content-switcher {}
+    &__button {
+        margin-top: 32px;
+        padding: 10px 45px;
+    }
+
+    &__content-switcher {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 20px;
+    }
 
     &__switch-button-text {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 0;
+        min-height: 40px;
+
         font-weight: 600;
+        margin-right: 117px;
+        text-align: start;
+
+        border: none;
+        border-top: 1px solid $color-light-black;
     }
 
     &__img {
         width: 100%;
         max-height: 720px; // Картинка никогда не станет выше этого значения
         object-fit: cover; // Лишнее аккуратно обрежется, не ломая пропорций
+        overflow: hidden;
     }
 }

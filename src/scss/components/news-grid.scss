@@ -3,7 +3,16 @@
         min-height: 1020px;
     }
 
-    &__inner {}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
     &__header {
         display: flex;
         justify-content: space-between;
@@ -11,7 +20,11 @@
 
     &__news-cards {
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 100%;
+        margin-top: 32px;
+        gap: 20px
     }
 
     &__title {
@@ -25,5 +38,9 @@
         text-align: left;
 
         color: $color-black;
+    }
+
+    &__button {
+        padding: 10px 45px;
     }
 }

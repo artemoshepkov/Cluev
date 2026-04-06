@@ -35,6 +35,7 @@
         z-index: 1;
         min-height: 720px;
         padding-top: 132px;
+        margin-left: 155px;
     }
 
     &__header {
@@ -47,6 +48,39 @@
         color: $color-white;
 
         text-align: left;
+    }
+
+    // Линии как в Figma: 1px, #fff 20%, штрих 2px / зазор 2px
+    $service-info-line: repeating-linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.2) 0,
+        rgba(255, 255, 255, 0.2) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        color: $color-white;
+        margin-top: clamp(1.5rem, 4vw, 2.5rem);
+        background-image: $service-info-line;
+        background-size: 100% 1px;
+        background-repeat: no-repeat;
+        background-position: top;
+        margin-top: 64px;
+    }
+
+    &__table tr td {
+        padding-top: clamp(0.875rem, 2vw, 1.25rem);
+        padding-bottom: clamp(0.875rem, 2vw, 1.25rem);
+        vertical-align: middle;
+        background-image: $service-info-line;
+        background-size: 100% 1px;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        margin-right: 133px;
     }
 
     &__table-first-col {
