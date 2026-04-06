@@ -36,9 +36,7 @@
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.45s cubic-bezier(0.45, 0, 0.55, 1);
-        overflow-y: auto;
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
+        overflow: hidden;
     }
 
     &__logo {
@@ -82,5 +80,118 @@
         width: 100%;
         margin: 0;
         color: $color-black;
+        text-decoration: none;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+// Карточка товара: общая типографика; wide — с описанием; compact — узкие ячейки без описания.
+.hover-details-item--product {
+    .hover-details-item__panel {
+        justify-content: flex-start;
+        // stretch: иначе при center ширина блоков = по тексту, строки не переносятся по колонке и режутся по overflow-x
+        align-items: stretch;
+        min-height: 100%;
+        padding: clamp(18px, 5vw, 36px) clamp(14px, 4vw, 28px);
+    }
+
+    .hover-details-item__eyebrow {
+        flex: 0 0 auto;
+        width: 100%;
+        min-width: 0;
+        font-family: $font-tt-ricordi-marmo;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.35;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba($color-black, 0.42);
+        margin: 0;
+        overflow-wrap: break-word;
+        // последняя буква с letter-spacing не обрезается справа
+        padding-inline-end: 0.12em;
+    }
+
+    .hover-details-item__product-head {
+        flex: 0 0 auto;
+        width: 100%;
+        min-width: 0;
+        margin-top: clamp(10px, 3vh, 28px);
+    }
+
+    .hover-details-item__title-text {
+        font-family: $font-tt-firs-text;
+        font-weight: 500;
+        font-style: normal;
+        font-size: clamp(15px, 1.8vw, 19px);
+        line-height: 1.4;
+        color: $color-black;
+        margin: 0;
+        max-width: 100%;
+        min-width: 0;
+        border: 0;
+        padding: 0;
+        overflow-wrap: break-word;
+    }
+
+    .hover-details-item__detail {
+        font-family: $font-tt-firs-text;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.45;
+        color: rgba($color-black, 0.52);
+        margin: 10px 0 0;
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .hover-details-item__button-wrap {
+        flex: 0 0 auto;
+        flex-shrink: 0;
+        width: 100%;
+        min-width: 0;
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+}
+
+// Большие ячейки грида: описание между блоком заголовка и кнопкой, без налезания на кнопку.
+.hover-details-item--product-wide {
+    .hover-details-item__description {
+        flex: 1 1 0;
+        flex-shrink: 1;
+        align-self: stretch;
+        width: 100%;
+        min-height: 0;
+        max-height: 100%;
+        margin: clamp(10px, 2vh, 20px) 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        font-family: $font-tt-firs-text;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 1.55;
+        letter-spacing: 0;
+        color: rgba($color-black, 0.55);
+        text-align: center;
+    }
+}
+
+// Узкие ячейки: только коллекция, заголовок, кнопка внизу.
+.hover-details-item--product-compact {
+    .hover-details-item__product-head {
+        margin-top: clamp(8px, 2vh, 20px);
+    }
+
+    .hover-details-item__button-wrap {
+        margin-top: auto;
     }
 }

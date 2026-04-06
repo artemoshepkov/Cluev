@@ -5,12 +5,80 @@
         <div class="collections__grid">
             <div class="collections__bg-text">Светлячок</div>
 
-            <img class="collections__item collections__item--1" src="@img/products/product5.jpg">
-            <img class="collections__item collections__item--2" src="@img/products/product13.jpg">
-            <img class="collections__item collections__item--3" src="@img/products/product14.jpg">
-            <img class="collections__item collections__item--4" src="@img/products/product12.jpg">
-            <img class="collections__item collections__item--5" src="@img/products/product7.jpg">
-            <img class="collections__item collections__item--6" src="@img/products/product6.png">
+            <div class="collections__item collections__item--1">
+                <div class="collections__item-media">
+                    <img src="@img/products/product5.jpg" alt="">
+                    <div class="hover-details-item-container collections__hover-details-item-container">
+                        @@include('../blocks/hover-details-product.html', {
+                            'category': 'Светлячки',
+                            'title': 'Серьги с желтыми бриллиантами',
+                            'detail': '25,192 карата',
+                            'description': 'Символ надежды и вдохновения. Их нежное свечение в темноте представляет собой маяк света в тени.'
+                        })
+                    </div>
+                </div>
+            </div>
+            <div class="collections__item collections__item--2">
+                <div class="collections__item-media">
+                    <img src="@img/products/product13.jpg" alt="">
+                    <div class="hover-details-item-container collections__hover-details-item-container">
+                        @@include('../blocks/hover-details-product-compact.html', {
+                            'category': 'Возрождение',
+                            'title': 'Подвеска с сапфиром',
+                            'detail': '18,4 карата'
+                        })
+                    </div>
+                </div>
+            </div>
+            <div class="collections__item collections__item--3">
+                <div class="collections__item-media">
+                    <img src="@img/products/product14.jpg" alt="">
+                    <div class="hover-details-item-container collections__hover-details-item-container">
+                        @@include('../blocks/hover-details-product-compact.html', {
+                            'category': 'Классика',
+                            'title': 'Кольцо с бриллиантом',
+                            'detail': '2,1 карата'
+                        })
+                    </div>
+                </div>
+            </div>
+            <div class="collections__item collections__item--4">
+                <div class="collections__item-media">
+                    <img src="@img/products/product12.jpg" alt="">
+                    <div class="hover-details-item-container collections__hover-details-item-container">
+                        @@include('../blocks/hover-details-product.html', {
+                            'category': 'Золотой век',
+                            'title': 'Серьги с жемчугом',
+                            'detail': '12 карата',
+                            'description': 'Символ надежды и вдохновения. Их нежное свечение в темноте представляет собой маяк света в тени.'
+                        })
+                    </div>
+                </div>
+            </div>
+            <div class="collections__item collections__item--5">
+                <div class="collections__item-media">
+                    <img src="@img/products/product7.jpg" alt="">
+                    <div class="hover-details-item-container collections__hover-details-item-container">
+                        @@include('../blocks/hover-details-product-compact.html', {
+                            'category': 'Импрессионизм',
+                            'title': 'Браслет с изумрудами',
+                            'detail': '8,7 карата'
+                        })
+                    </div>
+                </div>
+            </div>
+            <div class="collections__item collections__item--6">
+                <div class="collections__item-media">
+                    <img src="@img/products/product6.png" alt="">
+                    <div class="hover-details-item-container collections__hover-details-item-container">
+                        @@include('../blocks/hover-details-product-compact.html', {
+                            'category': 'Свадебная',
+                            'title': 'Колье с бриллиантами',
+                            'detail': '32 карата'
+                        })
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div class="collections__controls">

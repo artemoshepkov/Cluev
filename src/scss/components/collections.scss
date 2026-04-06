@@ -1,5 +1,6 @@
 .collections {
     background: $color-cream;
+    position: relative;
 
     @media (min-width: $laptop) {
         min-height: 1050px;
@@ -9,14 +10,77 @@
     flex-direction: column;
     align-items: center;
 
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background-image:
+            linear-gradient(180deg, rgba(8, 2, 16, 0.5) 0%, rgba(4, 0, 10, 0.78) 100%),
+            url('@img/addresses/1.png');
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s cubic-bezier(0.45, 0, 0.55, 1);
+        pointer-events: none;
+    }
+
+    &:has(.collections__grid .collections__item-media:hover)::after,
+    &:has(.collections__grid .collections__item-media:focus-within)::after {
+        opacity: 1;
+    }
+
+    &:has(.collections__grid .collections__item-media:hover),
+    &:has(.collections__grid .collections__item-media:focus-within) {
+        .collections__title {
+            color: $color-white;
+            transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
+        }
+
+        .collections__bg-text {
+            color: rgba($color-white, 0.12);
+            transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
+        }
+
+        .collections__nav-links {
+            color: rgba($color-white, 0.78);
+            transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
+        }
+
+        .collections__info {
+            color: rgba($color-white, 0.72);
+            transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
+        }
+
+        .collections__button.primary-button--black-border {
+            color: $color-white;
+            border-color: rgba($color-white, 0.35);
+
+            &:hover {
+                border-color: rgba($color-white, 1);
+            }
+        }
+
+        // Рамка по контуру картинки (обёртка), не по ячейке сетки
+        .collections__item-media {
+            box-sizing: border-box;
+            border: 1px solid rgba($color-white, 0.28);
+        }
+
+        .collections__item-media:not(:hover):not(:focus-within) img {
+            opacity: 0;
+        }
+    }
+
     &__inner {
         position: relative;
+        z-index: 1;
         margin: 100px 0 80px 0;
 
         ul {
-            list-style-type: none; /* Убирает сами точки */
-            padding: 0;           /* Убирает пустое место слева */
-            margin: 0;            /* Убирает внешние отступы (сверху и снизу) */
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
     }
 
@@ -28,9 +92,12 @@
         line-height: 24px;
         letter-spacing: 0;
         text-align: center;
+        color: $color-black;
+        transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
     }
 
     &__grid {
+        position: relative;
         display: grid;
         grid-template-columns: 330px 217px 217px 330px 275px;
         grid-template-rows: auto auto;
@@ -41,19 +108,103 @@
     }
 
     &__item {
+        position: relative;
+        overflow: hidden;
         z-index: 1;
-
-        img {
-            width: 100%;  /* Растягиваем по ширине родителя (.collections__item--1) */
-            height: 100%; /* Растягиваем по высоте родителя */
-    
-            object-fit: cover; /* Картинка заполнит всё место, лишнее обрежется, пропорции сохранятся */
-            
-            object-position: center; 
-        }
+        object-fit: unset;
+        // Иначе min-content ячейки шире колонки (275px и т.д.) — плашка обрезается overflow
+        min-width: 0;
 
         &--1 {
+            grid-column: 1;
+            grid-row: 1;
+        }
 
+        &--2 {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        &--3 {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        &--4 {
+            grid-column: 4;
+            grid-row: 1;
+        }
+
+        &--5 {
+            grid-column: 5;
+            grid-row: 1;
+        }
+
+        &--6 {
+            grid-column: 2;
+            grid-row: 2;
+        }
+    }
+
+    &__item-media {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-width: 0;
+        line-height: 0;
+        // Обрезаем плашку по контуру картинки (flex/контент иначе может вылезти за padding-box)
+        overflow: hidden;
+
+        img {
+            position: relative;
+            z-index: 0;
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: opacity 0.45s cubic-bezier(0.45, 0, 0.55, 1);
+        }
+    }
+
+    &__hover-details-item-container {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        min-width: 0;
+    }
+
+    &__item-media:hover .hover-details-item__panel,
+    &__item-media:focus-within .hover-details-item__panel {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    // Плашка на всю область .collections__item-media (как картинка), не на ячейку грида
+    .hover-details-item--product {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 0;
+        overflow: hidden;
+        max-height: 100%;
+
+        .hover-details-item__panel {
+            flex: 1 1 0;
+            width: 100%;
+            max-width: 100%;
+            min-height: 0;
+            max-height: 100%;
+            margin: 0;
+        }
+    }
+
+    // Узкие ячейки: при низкой картинке контент не обрезаем — скролл внутри плашки (без полосы)
+    .hover-details-item--product-compact .hover-details-item__panel {
+        overflow-x: hidden;
+        overflow-y: auto;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
         }
     }
 
@@ -71,7 +222,8 @@
         line-height: 120px;
         letter-spacing: 0;
         text-align: center;
-        color: $color-black
+        color: $color-black;
+        transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
     }
 
     &__nav-links {
@@ -82,6 +234,7 @@
         line-height: 24px;
         letter-spacing: 0;
         color: rgba($color: $color-black, $alpha: 0.8);
+        transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
     }
 
     &__info {
@@ -92,29 +245,8 @@
         line-height: 20px;
         letter-spacing: 0;
         text-align: left;
-        color: #0D0D0DB2;
-    }
-    &__item {
-        object-fit: cover;
-
-        &--1 { 
-            grid-column: 1; grid-row: 1;
-        }
-        &--2 { 
-            grid-column: 2; grid-row: 1;
-        }
-        &--3 { 
-            grid-column: 3; grid-row: 1;
-        }
-        &--4 { 
-            grid-column: 4; grid-row: 1;
-        }
-        &--5 { 
-            grid-column: 5; grid-row: 1;
-        }
-        &--6 { 
-            grid-column: 2; grid-row: 2;
-        }
+        color: #0d0d0db2;
+        transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
     }
 
     &__controls {
@@ -143,5 +275,8 @@
         width: 100%;
 
         margin-top: 32px;
+        transition:
+            color 0.45s cubic-bezier(0.45, 0, 0.55, 1),
+            border-color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
     }
 }
