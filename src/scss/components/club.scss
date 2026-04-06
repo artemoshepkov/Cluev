@@ -24,6 +24,11 @@
         flex-direction: column;
         justify-content: flex-end;
         flex: 1 1 0;
+        overflow: hidden;
+
+        &:hover .product-info__button-wrap {
+            grid-template-rows: 1fr;
+        }
     }
 
     &__product-media {
@@ -87,13 +92,26 @@
 
 .product-info {
     position: relative;
-    margin: 0 40px;
     z-index: 1;
     bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0 40px;
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9) 0%, 
+        rgba(0, 0, 0, 0.8) 20%,
+        rgba(0, 0, 0, 0.6) 50%,
+        rgba(0, 0, 0, 0.3) 80%,
+        rgba(0, 0, 0, 0) 100%  
+    );
 
     &__flex {
         display: flex;
         justify-content: space-between;
+        margin-top: 40px;
     }
 
     &__collection {
@@ -154,8 +172,22 @@
         }
     }
 
+    &__button-wrap {
+        display: grid;
+        grid-template-rows: 0fr;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        overflow: hidden;
+        transition: grid-template-rows 0.45s cubic-bezier(0.45, 0, 0.55, 1);
+    }
+
+    &__button-inner {
+        min-height: 0;
+        overflow: hidden;
+    }
+
     &__button {
         width: 100%;
-        margin: 20px 0 40px 0;
+        margin: 0;
     }
 }
