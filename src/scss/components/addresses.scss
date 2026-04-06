@@ -10,13 +10,6 @@
         padding: 0 0;
     }
 
-
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        min-height: inherit;
-    }
-
     &__section-back {
         position: absolute;
         inset: 0;
@@ -41,20 +34,21 @@
         z-index: 1;
     }
 
-    &__left-section {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        flex: 1 1 0;
-
-
-    }
-
+    &__left-section,
     &__right-section {
         display: flex;
         flex-direction: column;
         position: relative;
         flex: 1 1 0;
+        overflow: hidden;
+
+        &:hover,
+        &:focus-within {
+            .hover-details-item__panel {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
     }
 
     &__city {
@@ -87,6 +81,18 @@
         color: $color-white;
 
         margin-bottom: 40px;
+    }
+
+    // Слот под плашку = вся колонка (как раньше оверлей). В других секциях задайте размеры на .hover-details-item-container.
+    &__hover-details-item-container {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 310px;
     }
 }
 
