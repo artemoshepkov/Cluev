@@ -1,0 +1,554 @@
+:root {
+    --side-main-w: 480px;
+    --side-sub-w: 408px;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1001;
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    visibility: hidden;
+
+    &.is-active {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    &__container {
+        display: flex;
+        height: 100%;
+    }
+
+    &__main {
+
+        width: var(--side-main-w);
+        background: #fff;
+        padding: 64px 40px;
+        z-index: 10;
+        border-right: 1px solid #f0f0f0;
+        overflow-y: auto;
+    }
+
+    &__header {
+        
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-family: $font-tt-firs-text;
+        font-size: 20px;
+    }
+
+    &__close {
+        width: 8px;
+        color: $color-black;
+    }
+
+    &__inner-link {
+        font-family: $font-noto-sans-display-condensed;
+        font-size: 14px
+    }
+
+    // UIkit (.uk-nav a) перебивает один класс — нужна специфичность ≥ правил нав
+    ul.uk-nav a#{&}__link {
+        font-family: $font-tt-firs-text;
+        font-size: 14px;
+
+        color: $color-black;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+
+    ul.uk-nav li#{&}__group a {
+        color: $color-black;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus-visible,
+        &.is-active {
+            color: $color-black;
+            font-weight: 500;
+        }
+    }
+
+    ul.uk-nav#{&}__sub-nav a#{&}__link {
+        font-family: $font-tt-firs-text;
+        font-size: 14px;
+        color: $color-black;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus-visible {
+            color: $color-black;
+            font-weight: 500;
+        }
+    }
+
+    #sub-wardrobe {
+        ul.uk-nav.side-menu__sub-nav a {
+            text-decoration: none;
+
+            &:hover,
+            &:focus-visible,
+            &:active {
+                text-decoration: none;
+            }
+        }
+
+        .side-menu__sub-footer .primary-link {
+            text-decoration: none;
+
+            &:hover,
+            &:focus-visible {
+                text-decoration: none;
+            }
+        }
+    }
+
+    ul.uk-nav a#{&}__sub-trigger {
+        font-family: $font-tt-firs-text;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+
+        &::after {
+            content: '';
+            flex-shrink: 0;
+            width: 5px;
+            height: 5px;
+            border-right: 1px solid currentColor;
+            border-bottom: 1px solid currentColor;
+            transform: rotate(-45deg);
+            margin-top: 1px;
+        }
+
+        &:hover::after,
+        &:focus-visible::after,
+        &.is-active::after {
+            border-right-width: 2px;
+            border-bottom-width: 2px;
+        }
+    }
+    
+    &__triggers-group {
+        margin-top: 40px;
+    }
+
+    &__info-group {
+        margin-top: 24px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 24px;
+        font-family: $font-noto-sans-display-condensed;
+        font-size: 14px;
+    }
+
+    ul.uk-nav li#{&}__group#{&}__contacts {
+        color: #00000080;
+
+        a {
+            color: #00000080;
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
+
+        .side-menu__contact-item div {
+            color: #00000080;
+            transition: color 0.15s ease;
+
+            &:hover {
+                color: #000000;
+            }
+        }
+
+        a:hover,
+        a:focus-visible,
+        a:active {
+            color: #000000;
+        }
+
+        > a.side-menu__link {
+            font-family: $font-noto-sans-display-condensed;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        margin-top: 42px;
+
+        font-family: $font-noto-sans-display-condensed;
+        font-size: 14px;
+    }
+
+    ul.uk-nav li#{&}__footer {
+        margin-top: 32px;
+        font-family: $font-noto-sans-display-condensed;
+        font-size: 14px;
+
+        > a {
+            font-weight: 300;
+            color: #00000080;
+            text-decoration: none;
+            transition: color 0.15s ease;
+
+            &:hover,
+            &:focus-visible {
+                color: #000000;
+            }
+        }
+
+        .side-menu__copy {
+            font-weight: 300;
+            color: #00000080;
+            transition: color 0.15s ease;
+
+            &:hover {
+                color: #000000;
+            }
+
+            a {
+                font-weight: 400;
+                color: $color-black;
+                text-decoration: none;
+                cursor: pointer;
+
+                &:hover,
+                &:focus-visible {
+                    color: $color-black;
+                }
+            }
+        }
+    }
+
+    &__sub {
+        width: 0;
+        align-self: stretch;
+        min-height: 0;
+        max-height: 100%;
+        background: #fff;
+        overflow: hidden;
+        transition: width 0.3s ease;
+        z-index: 5;
+        pointer-events: none;
+
+        &.is-visible {
+            width: var(--side-sub-w);
+            overflow-x: hidden;
+            overflow-y: auto;
+            pointer-events: all;
+            border-right: 1px solid #f0f0f0;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
+
+    &__sub-nav {
+        margin-bottom: 40px;
+    }
+
+    &__sub-title {
+        font-family: $font-tt-firs-text;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+
+    &__sub-content {
+        display: none;
+        width: var(--side-sub-w);
+        padding: 64px 24px;
+        gap: 8px;
+        box-sizing: border-box;
+        flex-shrink: 0;
+
+        &.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        &#sub-high-jewelry {
+            padding-left: 24px;
+            padding-right: 24px;
+
+            .sub-card {
+                width: 360px;
+                max-width: 100%;
+                height: 214px;
+                aspect-ratio: auto;
+                flex-shrink: 0;
+            }
+        }
+
+        .sub-card {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+
+            &__image {
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                overflow: hidden;
+            }
+
+            img {
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &__label {
+                position: absolute;
+                z-index: 2;
+                top: 12px;
+                left: 12px;
+                right: 12px;
+                margin: 0;
+                font-family: $font-serif;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 1.2;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                text-align: left;
+                color: $color-black;
+                text-shadow: 0 0 12px rgba(255, 255, 255, 0.95), 0 1px 2px rgba(255, 255, 255, 0.9);
+                pointer-events: none;
+            }
+
+            &__title {
+                position: absolute;
+                z-index: 1;
+                left: 20px;
+                max-width: calc(100% - 40px);
+                margin: 0;
+                text-align: left;
+                text-transform: uppercase;
+                font-family: $font-tt-ricordi-marmo;
+                font-size: 16px;
+                color: $color-black;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &--text-light .sub-card__title {
+                color: $color-white;
+            }
+
+            &--align-bottom .sub-card__title {
+                top: auto;
+                bottom: 24px;
+                transform: none;
+            }
+        }
+
+        .side-menu__collection-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .sub-card--collection {
+            width: 112px;
+            max-width: 100%;
+            box-sizing: border-box;
+            aspect-ratio: unset;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 8px;
+            overflow: visible;
+
+            > a {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                color: $color-black;
+                text-decoration: none;
+
+                &:hover,
+                &:focus-visible {
+                    text-decoration: none;
+                }
+            }
+
+            .sub-card__image {
+                position: relative;
+                width: 112px;
+                height: 112px;
+                max-width: 100%;
+                flex-shrink: 0;
+                box-sizing: border-box;
+                border: 1px solid #0000001a;
+                overflow: hidden;
+
+                img {
+                    position: absolute;
+                    inset: 0;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .sub-card__label {
+                position: static;
+                width: 100%;
+                max-width: 112px;
+                padding: 0;
+                top: auto;
+                left: auto;
+                right: auto;
+                font-size: 10px;
+                line-height: 1.25;
+                letter-spacing: 0.04em;
+                text-align: left;
+                text-shadow: none;
+                overflow-wrap: anywhere;
+                word-break: break-word;
+                hyphens: auto;
+                pointer-events: auto;
+            }
+        }
+    }
+
+    &__wedding-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+
+    &__wedding-card {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        text-decoration: none;
+        color: inherit;
+        flex-shrink: 0;
+
+        &-image {
+            position: absolute;
+            inset: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &-shade {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.82) 0%,
+                rgba(0, 0, 0, 0.35) 28%,
+                rgba(0, 0, 0, 0) 42%
+            );
+        }
+
+        &-text {
+            position: absolute;
+            z-index: 1;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        &-label {
+            font-family: $font-tt-ricordi-marmo;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #FFFFFF99;
+        }
+
+        &-title {
+            font-family: $font-tt-firs-text;
+            font-size: 24px;
+            font-weight: 500;
+            color: $color-white;
+        }
+    }
+
+    &__sub-footer {
+        margin-top: 24px;
+        padding-top: 4px;
+    }
+
+    &__all-link {
+        font-family: $font-noto-sans-display-condensed;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $color-black;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+
+        &:hover,
+        &:focus-visible {
+            color: $color-black;
+            text-decoration: underline;
+        }
+    }
+}
+
+.side-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    transition: opacity 0.4s ease;
+    &.is-active { 
+        opacity: 1; 
+        visibility: visible; 
+    }
+}
+
+@media (max-width: 960px) {
+    :root {
+        --side-main-w: 80vw;
+        --side-sub-w: 70vw;
+    }
+}
+
+// Прокрутка страницы под открытым меню
+html.is-locked,
+body.is-locked {
+    overflow: hidden;
+    height: 100%;
+    overscroll-behavior: none;
+}

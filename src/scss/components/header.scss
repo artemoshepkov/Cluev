@@ -67,3 +67,11 @@
         color: $header-color-scroll !important;
     }
 }
+.js-menu-open {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    
+    &:active {
+        transform: scale(0.96);
+    }
+}

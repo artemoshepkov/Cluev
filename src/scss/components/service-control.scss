@@ -23,7 +23,25 @@
     }
 
     &__content {
+        display: flex;
+        justify-content: space-between;
+
         margin: 40px 0;
+
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        pointer-events: none;
+
+        transition: 
+        opacity 0.4s ease;
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+            height: auto;
+            pointer-events: all;
+        }
     }
 
     &__heading-text {
@@ -92,7 +110,14 @@
         text-align: start;
 
         border: none;
-        border-top: 1px solid $color-light-black;
+        border-top: 1px solid #0F0F0F80;
+
+        color: #0F0F0F80;
+
+        &.active {
+            border-top: 1px solid $color-light-black;
+            color: $color-light-black;
+        }
     }
 
     &__img {

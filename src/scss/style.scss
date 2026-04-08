@@ -6,6 +6,7 @@
 /** Подключение переменных */
 @import 'config/vars';
 @import '../static/uikit.min.css';
+@import '../static/swiper.min.css';
 
 /** Подключение sass function и mixins и extends стилей */
 @import 'config/functions';
@@ -27,10 +28,13 @@
 @import 'components/blocks/news-card';
 @import 'components/blocks/animations';
 @import 'components/blocks/hover-details-item';
+@import 'components/blocks/jewelry-product-card';
 
 @import 'components/header';
 
+@import 'components/side-menu';
 @import 'components/hero';
+@import 'components/jewelry';
 @import 'components/collections';
 @import 'components/ambassadors';
 @import 'components/service-info';

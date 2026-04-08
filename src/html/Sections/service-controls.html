@@ -1,21 +1,36 @@
 <section class="service-controls">
     <div class="service-controls__inner container">
         <div class="service-controls__controls">
-            <div class="service-controls__content">
-                <div class="service-controls__heading-text">Сервис Cluev</div>
-                <div class="service-controls__title">УХОД ЗА ИЗДЕЛИЯМИ</div>
-                <div class="service-controls__description">Lorem ipsum dolor sit amet consectetur. Lectus turpis consequat ipsum integer ac augue sed. Risus lectus enim purus netus proin eget tristique. Tempor libero non proin nec. </div>
-                <button class="service-controls__button primary-button primary-button--black-border">ПОДРОБНЕЕ</button>
+            <div class="service-controls__content active" id="content-1">
+                <div>
+                    <div class="service-controls__heading-text">Сервис Cluev</div>
+                    <div class="service-controls__title">УХОД ЗА ИЗДЕЛИЯМИ</div>
+                    <div class="service-controls__description">Lorem ipsum dolor sit amet consectetur. Lectus turpis consequat ipsum integer ac augue sed. Risus lectus enim purus netus proin eget tristique. Tempor libero non proin nec. </div>
+                    <button class="service-controls__button primary-button primary-button--black-border">ПОДРОБНЕЕ</button>
+                </div>
+                
+                <div class="service-controls__img">
+                    <img src="@img/service-controls/1.png">
+                </div>
+            </div>
+
+            <div class="service-controls__content" id="content-2">
+                <div>
+                    <div class="service-controls__heading-text">Сервис Cluev</div>
+                    <div class="service-controls__title">ПРОДЛИТЬ ГАРАНТИЮ</div>
+                    <div class="service-controls__description">Lorem ipsum dolor sit amet consectetur. Lectus turpis consequat ipsum integer ac augue sed. Risus lectus enim purus netus proin eget tristique. Tempor libero non proin nec. </div>
+                    <button class="service-controls__button primary-button primary-button--black-border">ПОДРОБНЕЕ</button>
+                </div>
+                
+                <div class="service-controls__img">
+                    <img src="@img/service-controls/2.png">
+                </div>
             </div>
 
             <div class="service-controls__content-switcher">
-                <button class="primary-button service-controls__switch-button-text">УХОД ЗА ИЗДЕЛИЯМИ</button>
-                <button class="primary-button service-controls__switch-button-text">ПРОДЛИТЬ ГАРАНТИЮ</button>
+                <button data-target="content-1" class="primary-button service-controls__switch-button-text active">УХОД ЗА ИЗДЕЛИЯМИ</button>
+                <button data-target="content-2" class="primary-button service-controls__switch-button-text">ПРОДЛИТЬ ГАРАНТИЮ</button>
             </div>
-        </div>
-
-        <div class="service-controls__img">
-            <img src="@img/service-controls/1.png">
         </div>
     </div>
 </section>

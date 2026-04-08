@@ -1,0 +1,26 @@
+.jewelry-product-card {
+    &__img-container {
+        border: 1px solid #0000001A;
+    }
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__text-body {
+        margin-top: 8px;
+    }
+
+    &__collection {
+        font-family: $font-tt-ricordi-marmo;
+        font-size: 14px;
+        color: #00000080;
+    }
+
+    &__title {
+        font-family: $font-tt-firs-text;
+        font-size: 14px;
+    }
+}

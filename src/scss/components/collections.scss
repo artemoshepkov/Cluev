@@ -226,7 +226,7 @@
         transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
     }
 
-    &__nav-links {
+    &__nav-text {
         font-family: $font-tt-firs-text;
         font-weight: 400;
         font-style: normal;
@@ -236,6 +236,68 @@
         color: rgba($color: $color-black, $alpha: 0.8);
         transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
     }
+
+    &__nav-dot {
+        appearance: none;
+        -webkit-appearance: none;
+
+        cursor: pointer;
+        background: none;
+        border: none;
+
+        width: 300px;
+    }
+
+    &__dot {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border: 1px solid #0f0f0f80;
+        border-radius: 50%;
+        margin-right: 10px;
+        position: relative;
+        transition: border-color 0.3s ease;
+        vertical-align: middle;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 8px;
+            height: 8px;
+            margin: 0;
+            padding: 0;
+            background-color: #0f0f0f;
+            border-radius: 50%;
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(-50%, -50%) scale(0);
+            transition:
+                transform 0.3s ease,
+                opacity 0.3s ease,
+                visibility 0.3s ease;
+            pointer-events: none;
+        }
+    }
+
+    // Явные селекторы: вложенный &.active &__dot в Sass давал неверный путь .collections__nav-dot.active__dot
+    .collections__nav-dot:not(.active) .collections__dot::after {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    .collections__nav-dot.active .collections__dot {
+        border-color: #0f0f0f;
+    }
+
+    .collections__nav-dot.active .collections__dot::after {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
 
     &__info {
         font-family: $font-tt-firs-text;

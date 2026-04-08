@@ -98,6 +98,15 @@
         text-align: left;
 
         color: $color-white;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+
+    &__tech-links-container {
+        display: flex;
+        gap: 20px;
     }
 
     &__tech-link {
@@ -110,7 +119,12 @@
 
         text-align: left;
 
-        color: #FFFFFF80;
+        color: #FFFFFF;
+        opacity: 0.5;
+
+        &:hover {
+            color: #FFFFFF;
+        }
     }
 
     &__side-info {

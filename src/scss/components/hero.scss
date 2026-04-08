@@ -2,7 +2,7 @@
     position: relative;
     overflow: hidden;
 
-    min-height: 1356px;
+    min-height: 942px;
 
     &__media {
         position: absolute;
@@ -20,12 +20,6 @@
     }
 
     &__content {
-        position: absolute;
-        z-index: 10;
-
-        top: 90%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         text-align: center;
     }
 
