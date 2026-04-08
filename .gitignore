@@ -9,6 +9,6 @@ gulp/version.json
 src/static/videos
 nul
 nul.map
-src/fonts
-src/images
+# src/fonts
+# src/images
 dist.7z
