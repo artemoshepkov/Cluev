@@ -52,33 +52,33 @@
     }
 
     &__city {
-        font-family: $font-tt-ricordi-marmo;
+        font-family: $font-ricordi;
         font-weight: 400;
         font-style: normal;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 2%;
-        color: $color-white;
+        color: white;
 
         text-align: center;
 
-        color: $color-white;
+        color: white;
 
         margin-top: 40px;
     }
 
     &__street {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-weight: 500;
         font-style: normal;
         font-size: 15px;
         line-height: 130%;
         letter-spacing: 0%;
-        color: $color-white;
+        color: white;
 
         text-align: center;
 
-        color: $color-white;
+        color: white;
 
         margin-bottom: 40px;
     }

@@ -1,5 +1,5 @@
 .club {
-    background: $color-black;
+    background: black;
     
     @media (min-width: $laptop) {
         min-height: 900px;
@@ -10,7 +10,7 @@
         display: flex;
         position: relative;
         justify-content: space-between;
-        color: $color-white
+        color: white
     }
 
     &__info {
@@ -45,25 +45,25 @@
     }
 
     &__header {
-        font-family: $font-tt-ricordi-marmo;
+        font-family: $font-ricordi;
         font-weight: 400;
         font-style: normal;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0%;
-        color: $color-white;
+        color: white;
 
         text-align: left;
     }
 
     &__first-paragraph {
-        font-family: $font-tt-ricordi-marmo;
+        font-family: $font-ricordi;
         font-weight: 400;
         font-style: normal;
         font-size: 24px;
         line-height: 40px;
         letter-spacing: 0%;
-        color: $color-white;
+        color: white;
 
         text-align: left;
 
@@ -71,7 +71,7 @@
     }
 
     &__second-paragraph {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-weight: 400;
         font-style: normal;
         font-size: 16px;
@@ -115,7 +115,7 @@
     }
 
     &__collection {
-        font-family: $font-tt-ricordi-marmo;
+        font-family: $font-ricordi;
         font-weight: 400;
         font-style: normal;
         font-size: 14px;
@@ -127,7 +127,7 @@
     }
 
     &__name {
-        font-family: $font-tt-ricordi-marmo;
+        font-family: $font-ricordi;
         font-weight: 400;
         font-style: normal;
         font-size: 14px;
@@ -140,13 +140,13 @@
     }
 
     &__collection-title {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-weight: 400;
         font-style: normal;
         font-size: 24px;
         line-height: 28px;
         letter-spacing: 0%;
-        color: $color-white;
+        color: white;
 
         text-align: left;
 
@@ -154,13 +154,13 @@
     }
 
     &__details {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-weight: 400;
         font-style: normal;
         font-size: 16px;
         line-height: 20px;
         letter-spacing: 0.13px;
-        color: $color-white;
+        color: white;
 
         text-align: right;
 

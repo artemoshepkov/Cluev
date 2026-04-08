@@ -33,38 +33,38 @@
     &:has(.collections__grid .collections__item-media:hover),
     &:has(.collections__grid .collections__item-media:focus-within) {
         .collections__title {
-            color: $color-white;
+            color: white;
             transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
         }
 
         .collections__bg-text {
-            color: rgba($color-white, 0.12);
+            color: rgba(white, 0.12);
             transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
         }
 
         .collections__nav-links {
-            color: rgba($color-white, 0.78);
+            color: rgba(white, 0.78);
             transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
         }
 
         .collections__info {
-            color: rgba($color-white, 0.72);
+            color: rgba(white, 0.72);
             transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
         }
 
         .collections__button.primary-button--black-border {
-            color: $color-white;
-            border-color: rgba($color-white, 0.35);
+            color: white;
+            border-color: rgba(white, 0.35);
 
             &:hover {
-                border-color: rgba($color-white, 1);
+                border-color: rgba(white, 1);
             }
         }
 
         // Рамка по контуру картинки (обёртка), не по ячейке сетки
         .collections__item-media {
             box-sizing: border-box;
-            border: 1px solid rgba($color-white, 0.28);
+            border: 1px solid rgba(white, 0.28);
         }
 
         .collections__item-media:not(:hover):not(:focus-within) img {
@@ -85,14 +85,14 @@
     }
 
     &__title {
-        font-family: $font-tt-ricordi-marmo;
+        font-family: $font-ricordi;
         font-weight: 400;
         font-style: normal;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0;
         text-align: center;
-        color: $color-black;
+        color: black;
         transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
     }
 
@@ -215,25 +215,25 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        font-family: $font-tt-ricordi-marmo;
+        font-family: $font-ricordi;
         font-weight: 400;
         font-style: normal;
         font-size: 120px;
         line-height: 120px;
         letter-spacing: 0;
         text-align: center;
-        color: $color-black;
+        color: black;
         transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
     }
 
     &__nav-text {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-weight: 400;
         font-style: normal;
         font-size: 14px;
         line-height: 24px;
         letter-spacing: 0;
-        color: rgba($color: $color-black, $alpha: 0.8);
+        color: rgba($color: black, $alpha: 0.8);
         transition: color 0.45s cubic-bezier(0.45, 0, 0.55, 1);
     }
 
@@ -300,7 +300,7 @@
 
 
     &__info {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-weight: 400;
         font-style: normal;
         font-size: 14px;
@@ -325,14 +325,14 @@
     }
 
     &__button {
-        font-family: $font-noto-sans-condensed;
+        font-family: $font-noto;
         font-weight: 500;
         font-style: normal;
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 0;
         text-align: center;
-        color: $color-black;
+        color: black;
 
         width: 100%;
 

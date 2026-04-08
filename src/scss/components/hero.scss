@@ -24,33 +24,33 @@
     }
 
     &__header {
-        font-family: $font-tt-ricordi-marmo;
+        font-family: $font-ricordi;
         font-weight: 400;
         font-size: 52px;
         font-style: noraml;
         line-height: 60px;
         letter-spacing: 0;
-        color: $color-white;
+        color: white;
 
         padding-bottom: 32px;
     }
 
     &__info {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-style: normal;
         font-weight: 400;
         font-size: 24px;
         line-height: 28px;
         letter-spacing: 0;
-        color: $color-white;
+        color: white;
 
         padding-bottom: 16px;
     }
 
     &__link {
-        color: $color-white;
+        color: white;
         &:hover {
-            color: $color-white;
+            color: white;
         }
     }
 

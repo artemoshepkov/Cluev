@@ -5,7 +5,7 @@
     right: 0;
     z-index: 100;
 
-    transition: background $transition-speed $transition-ease;
+    transition: background .3s ;
 
     a {
         color: inherit;
@@ -13,7 +13,7 @@
     }
 
     &__text {
-        font-family: $font-noto-sans-display-condensed;
+        font-family: $font-noto;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
@@ -28,9 +28,9 @@
         color: $header-color-init;
         justify-content: space-between;
         align-items: center;
-        min-height: $min-header-height;
+        min-height: 88px;
 
-        transition: color $transition-speed $transition-ease;
+        transition: color .3s ;
     }
 
     &__controls {
@@ -60,7 +60,7 @@
     }
 
     &--scrolled {
-        background: $color-white !important;
+        background: white !important;
     }
 
     &--scrolled-inner {

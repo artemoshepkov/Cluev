@@ -1,22 +1,11 @@
 body {
-    background-color: $color-white;
-    font-family: $font-sans;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.65;
-    letter-spacing: 0.02em;
-    color: $color-black;
-    -webkit-font-smoothing: antialiased;
+    font-family: $font-noto;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: $font-serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-ricordi;
     font-weight: 500;
     line-height: 1.1;
-    letter-spacing: 0.04em;
 }
 
 a {
@@ -25,13 +14,7 @@ a {
 }
 
 img {
-    max-width: 100%;
     height: auto;
-    vertical-align: middle;
-}
-
-main {
-    display: block;
 }
 
 .text {
@@ -63,9 +46,5 @@ main {
                 font-size: #{$size}px;
             }
         }
-    }
-
-    &_alt {
-        font-family: 'PragmaticaExtended', sans-serif;
     }
 }

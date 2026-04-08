@@ -2,7 +2,7 @@
     appearance: none;
     -webkit-appearance: none;
 
-    font-family: $font-noto-sans-condensed;
+    font-family: $font-noto;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
@@ -12,25 +12,25 @@
     border-width: 1px;
     gap: 8px;
 
-    transition: border-color $transition-speed $transition-ease;
+    transition: border-color .3s ;
 
     &--white-text {
-        color: $color-white;
+        color: white;
     }
 
     &--white-border {
-        border-color: rgba($color: $color-white, $alpha: 0.1);
+        border-color: rgba($color: white, $alpha: 0.1);
 
         &:hover {
-            border-color: rgba($color: $color-white, $alpha: 1.0);
+            border-color: rgba($color: white, $alpha: 1.0);
         }
     }
 
     &--black-border {
-        border-color: rgba($color: $color-black, $alpha: 0.1);
+        border-color: rgba($color: black, $alpha: 0.1);
 
         &:hover {
-            border-color: rgba($color: $color-black, $alpha: 1.0);
+            border-color: rgba($color: black, $alpha: 1.0);
         }
     }
 }

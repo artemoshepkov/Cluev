@@ -20,7 +20,7 @@
     }
 
     &__date {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-weight: 400;
         font-style: normal;
         font-size: 14px;
@@ -33,7 +33,7 @@
         margin: 0 0 0 12px;
     }
     &__title {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-weight: 400;
         font-style: normal;
         font-size: 20px;
@@ -42,7 +42,7 @@
 
         text-align: left;
 
-        color: $color-black;
+        color: black;
         margin: 16px 0 0 12px;
     }
 }

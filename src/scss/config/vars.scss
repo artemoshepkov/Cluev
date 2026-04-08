@@ -1,43 +1,23 @@
-$laptop: 1440px;
+$laptop: 1392px;
 $tablet: 1100px;
 $mobile: 768px;
 $mobile-sm: 480px;
 
-// Sizes
-$min-header-height: 88px;
-
-// Animations
-$transition-speed: 0.4s;
-$transition-ease: ease-in-out;
-
 // Colors
 $color-cream: #f1ede9;
 $color-light-green: #FAF8F6;
-$color-black: #000000;
-$color-white: #ffffff;
 $color-shadow-whisper: #010101;
 $color-light-black: #0f0f0f;
 
-$header-color-init: $color-white;
-$header-color-scroll: $color-black;
+$header-color-init: white;
+$header-color-scroll: black;
 
-$font-noto-sans-display-condensed: 'Noto Sans Display Condensed', system-ui, sans-serif;
-$font-tt-firs-text: 'TT Firs Text', system-ui, sans-serif;
-$font-tt-ricordi-marmo: 'TT Ricordi Marmo';
+$font-noto: 'Noto', sans-serif;
+$font-firs: 'TTFirs', sans-serif;
+$font-ricordi: 'TTRicordi';
 
-$font-cormorant-garamond: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-$font-montserrat: 'Montserrat', system-ui, sans-serif;
-$font-inter: 'Inter', system-ui, sans-serif;
+$font-display: $font-noto;
 
-$font-noto-sans-condensed: 'Noto Sans Condensed', system-ui, sans-serif;
-$font-roboto-condensed: 'Roboto Condensed', system-ui, sans-serif;
-
-$font-serif: $font-cormorant-garamond;
-$font-sans: 'Montserrat', 'Inter', system-ui, sans-serif;
-
-$font-display: $font-noto-sans-display-condensed;
-
-$container-max: 1600px;
 $section-space: clamp(3rem, 8vw, 7.5rem);
 $ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 

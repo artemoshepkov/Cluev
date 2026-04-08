@@ -1,13 +1,14 @@
 .jewelry {
+    position: relative;
+    z-index: 2;
     @media (min-width: $laptop) {
         min-height: 915px;
     }
 
     width: 100%;
-    margin-top: -187px;
     box-sizing: border-box;
     transform-origin: center center;
-    background: $color-white;
+    background: white;
 
 
     &__inner {
@@ -25,12 +26,12 @@
     }
 
     &__section-title {
-        font-family: $font-tt-ricordi-marmo;
+        font-family: $font-ricordi;
         font-size: 16px;
     }
 
     &__heading-title {
-        font-family: $font-tt-ricordi-marmo;
+        font-family: $font-ricordi;
         font-size: 48px;
     }
 
@@ -42,7 +43,7 @@
         width: auto;
         max-width: 100%;
         box-sizing: border-box;
-        background: $color-white;
+        background: white;
     }
 
     &__slider-button {
@@ -55,8 +56,8 @@
         border: 1.04px solid #0000001A;
         border-radius: 50%;
 
-        color: $color-black;
-        background-color: $color-white;
+        color: black;
+        background-color: white;
 
         &::after {
             font-size: 13px;
@@ -77,14 +78,15 @@
     }
 
     &__product-item {
-        &.swiper-slide-visible,
-        &.swiper-slide-visible + .swiper-slide-visible {
-            transform-origin: right center;
-        }
-    
-        &.swiper-slide-visible + .swiper-slide-visible + .swiper-slide-visible,
-        &.swiper-slide-visible + .swiper-slide-visible + .swiper-slide-visible + .swiper-slide-visible {
-            transform-origin: left center;
+        width: 500px;
+        transition: .3s;
+        &--scroll {
+            &:nth-child(2n) {
+                width: 700px;
+            }
+            &:nth-child(3n) {
+                align-self: end;
+            }
         }
     }
 }

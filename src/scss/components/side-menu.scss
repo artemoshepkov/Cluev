@@ -40,56 +40,56 @@
     }
 
     &__title {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-size: 20px;
     }
 
     &__close {
         width: 8px;
-        color: $color-black;
+        color: black;
     }
 
     &__inner-link {
-        font-family: $font-noto-sans-display-condensed;
+        font-family: $font-noto;
         font-size: 14px
     }
 
     // UIkit (.uk-nav a) перебивает один класс — нужна специфичность ≥ правил нав
     ul.uk-nav a#{&}__link {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-size: 14px;
 
-        color: $color-black;
+        color: black;
         text-decoration: none;
 
         &:hover {
-            color: $color-black;
+            color: black;
         }
     }
 
     ul.uk-nav li#{&}__group a {
-        color: $color-black;
+        color: black;
         text-decoration: none;
 
         &:hover,
         &:active,
         &:focus-visible,
         &.is-active {
-            color: $color-black;
+            color: black;
             font-weight: 500;
         }
     }
 
     ul.uk-nav#{&}__sub-nav a#{&}__link {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-size: 14px;
-        color: $color-black;
+        color: black;
         text-decoration: none;
 
         &:hover,
         &:active,
         &:focus-visible {
-            color: $color-black;
+            color: black;
             font-weight: 500;
         }
     }
@@ -116,7 +116,7 @@
     }
 
     ul.uk-nav a#{&}__sub-trigger {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-size: 14px;
         display: flex;
         align-items: center;
@@ -155,7 +155,7 @@
         flex-direction: column;
         gap: 16px;
         margin-top: 24px;
-        font-family: $font-noto-sans-display-condensed;
+        font-family: $font-noto;
         font-size: 14px;
     }
 
@@ -184,7 +184,7 @@
         }
 
         > a.side-menu__link {
-            font-family: $font-noto-sans-display-condensed;
+            font-family: $font-noto;
         }
     }
 
@@ -192,13 +192,13 @@
         width: 100%;
         margin-top: 42px;
 
-        font-family: $font-noto-sans-display-condensed;
+        font-family: $font-noto;
         font-size: 14px;
     }
 
     ul.uk-nav li#{&}__footer {
         margin-top: 32px;
-        font-family: $font-noto-sans-display-condensed;
+        font-family: $font-noto;
         font-size: 14px;
 
         > a {
@@ -224,13 +224,13 @@
 
             a {
                 font-weight: 400;
-                color: $color-black;
+                color: black;
                 text-decoration: none;
                 cursor: pointer;
 
                 &:hover,
                 &:focus-visible {
-                    color: $color-black;
+                    color: black;
                 }
             }
         }
@@ -262,7 +262,7 @@
     }
 
     &__sub-title {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-size: 16px;
         font-weight: 500;
     }
@@ -325,14 +325,14 @@
                 left: 12px;
                 right: 12px;
                 margin: 0;
-                font-family: $font-serif;
+                font-family: $font-ricordi;
                 font-size: 12px;
                 font-weight: 500;
                 line-height: 1.2;
                 letter-spacing: 0.06em;
                 text-transform: uppercase;
                 text-align: left;
-                color: $color-black;
+                color: black;
                 text-shadow: 0 0 12px rgba(255, 255, 255, 0.95), 0 1px 2px rgba(255, 255, 255, 0.9);
                 pointer-events: none;
             }
@@ -345,15 +345,15 @@
                 margin: 0;
                 text-align: left;
                 text-transform: uppercase;
-                font-family: $font-tt-ricordi-marmo;
+                font-family: $font-ricordi;
                 font-size: 16px;
-                color: $color-black;
+                color: black;
                 top: 50%;
                 transform: translateY(-50%);
             }
 
             &--text-light .sub-card__title {
-                color: $color-white;
+                color: white;
             }
 
             &--align-bottom .sub-card__title {
@@ -385,7 +385,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
-                color: $color-black;
+                color: black;
                 text-decoration: none;
 
                 &:hover,
@@ -486,7 +486,7 @@
         }
 
         &-label {
-            font-family: $font-tt-ricordi-marmo;
+            font-family: $font-ricordi;
             font-size: 14px;
             font-weight: 400;
             text-transform: uppercase;
@@ -494,10 +494,10 @@
         }
 
         &-title {
-            font-family: $font-tt-firs-text;
+            font-family: $font-firs;
             font-size: 24px;
             font-weight: 500;
-            color: $color-white;
+            color: white;
         }
     }
 
@@ -507,18 +507,18 @@
     }
 
     &__all-link {
-        font-family: $font-noto-sans-display-condensed;
+        font-family: $font-noto;
         font-size: 12px;
         font-weight: 400;
         letter-spacing: 0.06em;
         text-transform: uppercase;
-        color: $color-black;
+        color: black;
         text-decoration: underline;
         text-underline-offset: 3px;
 
         &:hover,
         &:focus-visible {
-            color: $color-black;
+            color: black;
             text-decoration: underline;
         }
     }

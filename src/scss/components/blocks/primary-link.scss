@@ -1,7 +1,7 @@
 .primary-link {
     text-decoration: none;
     color: inherit;
-    transition: opacity $transition-speed $transition-ease;
+    transition: opacity .3s ;
 
     &:hover {
         text-decoration: none;

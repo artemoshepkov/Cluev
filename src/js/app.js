@@ -62,16 +62,13 @@ function initJewelrySwiper() {
     const prev = el.querySelector('.swiper-button-prev');
 
     new Swiper(el, {
-        slidesPerView: 4,
+        slidesPerView: 'auto',
         watchSlidesProgress: true,
         spaceBetween: 15,
-        navigation:
-            next && prev
-                ? {
-                      nextEl: next,
-                      prevEl: prev,
-                  }
-                : undefined,
+        navigation: {
+            nextEl: next,
+            prevEl: prev,
+        }
     });
 }
 
@@ -101,7 +98,7 @@ window.addEventListener('scroll', () => {
 
 // jewelry section animation 
 
-const jewelrySection = document.querySelector('.jewelry');
+/*const jewelrySection = document.querySelector('.jewelry');
 const jewelrySlides = jewelrySection
     ? jewelrySection.querySelectorAll('.swiper-slide')
     : [];
@@ -139,7 +136,7 @@ window.addEventListener('scroll', () => {
 
     // jewelrySection.style.transform = `scaleX(${currentScaleSectionX})`;
 });
-
+*/
 document.addEventListener('DOMContentLoaded', () => {
     const switchButtons = document.querySelectorAll('.service-controls__switch-button-text');
     const contentBlocks = document.querySelectorAll('.service-controls__content');

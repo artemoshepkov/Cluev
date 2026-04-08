@@ -39,13 +39,13 @@
     }
 
     &__header {
-        font-family: $font-tt-ricordi-marmo;
+        font-family: $font-ricordi;
         font-weight: 400;
         font-style: normal;
         font-size: 36px;
         line-height: 48px;
         letter-spacing: 0%;
-        color: $color-white;
+        color: white;
 
         text-align: left;
     }
@@ -63,7 +63,7 @@
         width: 100%;
         border-collapse: collapse;
         border-spacing: 0;
-        color: $color-white;
+        color: white;
         margin-top: clamp(1.5rem, 4vw, 2.5rem);
         background-image: $service-info-line;
         background-size: 100% 1px;
@@ -84,7 +84,7 @@
     }
 
     &__table-first-col {
-        font-family: $font-tt-ricordi-marmo;
+        font-family: $font-ricordi;
         font-weight: 400;
         font-style: normal;
         font-size: 14px;
@@ -95,7 +95,7 @@
         text-align: left;
     }
     &__table-second-col {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-weight: 500;
         font-style: normal;
         font-size: 18px;
@@ -106,13 +106,13 @@
         text-align: left;
     }
     &__table-third-col {
-        font-family: $font-tt-firs-text;
+        font-family: $font-firs;
         font-weight: 400;
         font-style: normal;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0%;
-        color: $color-white;
+        color: white;
 
         text-align: left;
     }
